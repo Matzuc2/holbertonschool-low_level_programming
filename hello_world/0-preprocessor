@@ -1,2 +1,2 @@
 #!/bin/bash
-./hey > c
+echo "$CFILE" > c

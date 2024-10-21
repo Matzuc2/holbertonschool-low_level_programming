@@ -8,12 +8,10 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int count = 0;
-	int i = 0;
+	int count = 1;
 
-	for (i <= 1; i < 10; i++)
+	for (count <= 1; count < 10; count++)
 	{
-	count++;
 	printf("%d", count);
 	}
 printf("\n");

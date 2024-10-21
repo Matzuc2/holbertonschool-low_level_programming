@@ -14,9 +14,16 @@ int main(void)
 	for (i = 0; i < 10; i++)
 	{
 	putchar(c);
+	if (c == '9')
+	{
+		continue;
+	}
+	else
+	{
 	putchar(',');
 	putchar(' ');
 	c++;
+	};
 	}
 putchar('\n');
 return (0);

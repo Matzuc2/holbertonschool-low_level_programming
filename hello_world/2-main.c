@@ -1,4 +1,4 @@
-}/*first code in c */
+/*first code in c */
 #include <stdio.h>
 /**
  * main - Entry point

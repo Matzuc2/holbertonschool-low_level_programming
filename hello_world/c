@@ -820,7 +820,5 @@ extern int __overflow (FILE *, int);
 # 8 "main.c"
 int main(void)
 {
-
-printf("hello world")
 return (0);
 }

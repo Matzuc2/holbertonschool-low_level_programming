@@ -4,6 +4,8 @@
  * Return: Always 0.
  * @n: int n.
  */
+int print_sign(int n);
+
 int print_sign(int n)
 {
 
@@ -23,5 +25,5 @@ int print_sign(int n)
 		_putchar('-');
 		return (-1);
 	}
-	return (0);
+
 }

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _isalpha - print the alphabet ten times

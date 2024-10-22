@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /* more headers goes there */
 /**
 *	main - Prints "Programming is like building a multilingual
@@ -6,8 +7,16 @@
 	* Return: Always 0.
 */
 /* betty style doc for function main goes there */
+#include <stdio.h>
 int main(void)
 {
-	printf("_putchar \n");
-	return (0);
+
+	char myString[] = "_putchar";
+
+	for (int i = 0; myString[i] != '\0'; ++i)
+	{
+	putchar(myString[i]);
+	}
+putchar('\n');
+return (0);
 }

@@ -8,12 +8,6 @@
 	* Return: Always 0.
 */
 /* betty style doc for function main goes there */
-
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- */
 int main(void)
 {
 	char str[] = "_putchar";

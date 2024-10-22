@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * main - check the code.
  *
@@ -19,4 +19,8 @@ int main(void)
     _putchar(r + '0');
     _putchar('\n');
     return (0);
+}
+int _putchar(char c)
+{
+	return write(1, &c, 1);
 }

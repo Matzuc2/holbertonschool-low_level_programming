@@ -1,6 +1,4 @@
-#include <unistd.h>
 #include "main.h"
-#include <ctype.h>
 /**
  * _putchar - writes the character c to stdout
  * _print_alphabet - writes the alphabet
@@ -57,16 +55,4 @@ int _islower(int c)
     }
 }
 
-int _isalpha(int c)
-{
-	c = 'a';
 
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-}

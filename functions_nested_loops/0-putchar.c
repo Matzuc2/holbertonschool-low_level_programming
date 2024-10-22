@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include "main.h"
 /* more headers goes there */
 /**
 *	main - Prints "Programming is like building a multilingual
@@ -7,17 +8,22 @@
 	* Return: Always 0.
 */
 /* betty style doc for function main goes there */
-#include <stdio.h>
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ */
 int main(void)
 {
+    char str[] = "_putchar";
+    int i;
 
-	char myString[] = "_putchar";
-	int i;
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        _putchar(str[i]);
+    }
+    _putchar('\n');
 
-	for (i = 0; myString[i] != '\0'; ++i)
-	{
-	putchar(myString[i]);
-	}
-putchar('\n');
-return (0);
+    return (0);
 }

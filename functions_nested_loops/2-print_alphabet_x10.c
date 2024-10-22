@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * print_alphabet - print the alphabet
+ * print_alphabet_x10 - print the alphabet ten times
  * Return: Always 0.
  */
 void print_alphabet_x10(void)
@@ -18,7 +18,7 @@ void print_alphabet_x10(void)
 			_putchar(a);
 			a++;
 			}
- 			a = 'a';
+			a = 'a';
 		_putchar(a);
 		}
 

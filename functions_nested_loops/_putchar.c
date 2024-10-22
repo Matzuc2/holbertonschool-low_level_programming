@@ -44,15 +44,29 @@ void print_alphabet_x10(void)
 		}
 
 }
+
 int _islower(int c)
 {
-	if (islower(c) != 0)
+    if (c >= 'a' && c <= 'z')
+    {
+        return (1);
+    }
+    else
+    {
+        return (0);
+    }
+}
+
+int _isalpha(int c)
+{
+	c = 'a';
+
+	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
 	{
-	return 1;
+		return (1);
 	}
 	else
 	{
-	return 0;
+		return (0);
 	}
 }
-

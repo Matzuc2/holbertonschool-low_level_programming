@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include "main.h"
+#include <ctype.h>
 /**
  * _putchar - writes the character c to stdout
  * _print_alphabet - writes the alphabet
@@ -43,3 +44,15 @@ void print_alphabet_x10(void)
 		}
 
 }
+int _islower(int c)
+{
+	if (islower(c) != 0)
+	{
+	return 1;
+	}
+	else
+	{
+	return 0;
+	}
+}
+

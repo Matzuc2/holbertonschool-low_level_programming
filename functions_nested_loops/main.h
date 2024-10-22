@@ -1,6 +1,7 @@
-#ifndef _PUTCHAR_h
-#define _PUTCHAR_h
+#ifndef _putchar_h
+#define _putchar_h
 
 int _putchar(char c);
+void print_alphabet(void);
 
 #endif

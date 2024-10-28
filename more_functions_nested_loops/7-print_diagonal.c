@@ -1,6 +1,8 @@
 #include "main.h"
-
-
+/**
+ * print_line - print __ in function of imput n
+ * @n:int n
+*/
 void print_diagonal(int n)
 {
 
@@ -13,17 +15,11 @@ void print_diagonal(int n)
 		}
 		for (i = 0; i < n; i++)
 		{
-			for(h = 0; h < n; h++)
+			for (h = 0; h < i; h++)
 			{
-				if(h == i)
-				{
-					_putchar(j);
-				}
-				else
-				{
-					_putchar(' ');
-				}
+				_putchar(' ');
 			}
+		_putchar(j);
 		_putchar('\n');
 		}
 

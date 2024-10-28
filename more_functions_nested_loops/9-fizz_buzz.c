@@ -11,7 +11,7 @@ int main(void)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (n % 3 == 0)
 		{
@@ -19,11 +19,15 @@ int main(void)
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", n);
+			printf("%d", n);
+		}
+		if (i < 100)
+		{
+			printf(" ");
 		}
 	}
 	printf("\n");

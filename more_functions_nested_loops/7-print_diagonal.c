@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - print __ in function of imput n
+ * print_diagonal - print __ in function of imput n
  * @n:int n
 */
 void print_diagonal(int n)

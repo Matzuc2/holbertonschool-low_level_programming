@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _isupper - returns 1 if the character is in uppercase
+ * @c: int n.
+ * Return: Always 1 or 0.
+ */
 int _isupper(int c)
 
 {

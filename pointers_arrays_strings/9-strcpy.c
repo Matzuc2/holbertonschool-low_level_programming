@@ -12,7 +12,3 @@ char *_strcpy(char *dest, char *src)
 	}
 return (dest);
 }
-int _putchar(char c)
-{
-        return (write(1, &c, 1));
-}

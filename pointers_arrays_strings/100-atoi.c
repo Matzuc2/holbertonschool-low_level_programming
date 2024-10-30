@@ -6,42 +6,36 @@
 *@s: char s
 *Return: return only first integers in strings
 */
+#include "main.h"
+
 int _atoi(char *s)
 {
-	int result = 0;
-	int sign = 1;
-	int i = 0;
-	int found_digit = 0;
+    int result = 0;
+    int puiss = 1;
+    int i = 0;
+    int found_digit = 0;
 
-	while (s[i] != '\0')
+    while (s[i] != '\0')
+    {
+	if (result > 214748364 || (result == 214748364 && *s > '7'))
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-
-			if (result > INT_MAX / 10 ||
-			(result == INT_MAX / 10 && (s[i] - '0') > INT_MAX % 10))
-			{
-				if (sign == -1 &&
-					result == INT_MAX / 10 &&
-				(s[i] - '0') == (INT_MAX % 10) + 1)
-				{
-					return (INT_MIN);
-				}
-				return (sign == 1 ? INT_MAX : INT_MIN);
-			}
-			result = result * 10 + (s[i] - '0');
-			found_digit = 1;
-		}
-		else if (found_digit)
-		{
-			break;
-		}
-		else if (s[i] == '-' && !found_digit)
-		{
-			sign = -1;
-		}
-		i++;
+		return ((puiss == 1) ? 2147483647 : -2147483648);
 	}
+        if (s[i] >= '0' && s[i] <= '9')
+        {
+            result = result * 10 + (s[i] - '0');
+            found_digit = 1;
+        }
+        else if (found_digit)
+        {
+            break;
+        }
+        else if (s[i] == '-' && !found_digit)
+        {
+            puiss *= -1;
+        }
+        i++;
+    }
 
-	return (result * sign);
+    return (result * puiss);
 }

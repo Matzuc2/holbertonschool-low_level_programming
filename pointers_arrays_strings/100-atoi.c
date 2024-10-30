@@ -14,8 +14,10 @@ int _atoi(char *s)
     {
         if (s[i] >= '0' && s[i] <= '9')
         {
+            // Vérifier le dépassement avant d'ajouter le chiffre
             if (result > INT_MAX / 10 || (result == INT_MAX / 10 && (s[i] - '0') > INT_MAX % 10))
             {
+                // Gérer le cas spécial de INT_MIN
                 if (sign == -1 && result == INT_MAX / 10 && (s[i] - '0') == (INT_MAX % 10) + 1)
                     return INT_MIN;
                 return (sign == 1) ? INT_MAX : INT_MIN;
@@ -30,10 +32,6 @@ int _atoi(char *s)
         else if (s[i] == '-' && !found_digit)
         {
             sign = -1;
-        }
-        else if (s[i] == '+' && !found_digit)
-        {
-            // Ne rien faire, mais garder cette condition pour la clarté
         }
         i++;
     }

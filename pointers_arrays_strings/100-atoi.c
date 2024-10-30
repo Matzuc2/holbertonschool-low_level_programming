@@ -21,6 +21,10 @@ int _atoi(char *s)
 	{
 		return ((puiss == 1) ? 2147483647 : -2147483648);
 	}
+	if (result < -214748364 || (result == -214748364 && *s > '7'))
+        {
+                return ((puiss == 1) ? 2147483647 : -2147483648);
+        }
         if (s[i] >= '0' && s[i] <= '9')
         {
             result = result * 10 + (s[i] - '0');

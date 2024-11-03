@@ -1,22 +1,27 @@
 #include "main.h"
 /**
-*leet - Mozart composed his music not for the elite, but for everybody ?
+*leet - Mozart composed his music not for the elite, but for everybody mdr
 *@str: return of pointer toward the original string in main
 *Return: return value for leet
 */
 
 char *leet(char *str)
 {
-
+	char letters[] = "aAeEoOtTlL";
+	char numbers[] = "4433007711";
 	int i;
+	int j = 0;
 
 	for (i = 0;  str[i] != '\0'; i++)
 	{
-		str[i] = (str[i] == 'a' || str[i] == 'A') ? '4' : str[i];
-		str[i] = (str[i] == 'e' || str[i] == 'E') ? '3' : str[i];
-		str[i] = (str[i] == 'o' || str[i] == 'O') ? '0' : str[i];
-		str[i] = (str[i] == 't' || str[i] == 'T') ? '7' :  str[i];
-		str[i] = (str[i] == 'l' || str[i] == 'L') ? '1' : str[i];
+
+		for (j = 0; letters[j] != '\0'; j++)
+		{
+			if (letters[j] == str[i])
+			{
+				str[i] = numbers[j];
+			}
+		}
 	}
 return (str);
 }

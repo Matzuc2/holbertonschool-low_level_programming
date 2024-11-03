@@ -9,7 +9,6 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
-	int j = 0;
 	int result;
 
 	for (; s1[i] != '\0' && s2[i] != '\0'; i++)

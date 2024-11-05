@@ -14,8 +14,6 @@ char *_strpbrk(char *s, char *accept)
 
 	int i;
 	int j = 0;
-	int count = 0; /*compteur*/
-	int found = 0; /*indice boolean*/
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -31,4 +29,6 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
+	return (NULL);
 }
+

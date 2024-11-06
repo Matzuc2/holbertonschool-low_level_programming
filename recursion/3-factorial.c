@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+*factorial - retourne le facteur d'un nombre entier
+*@n: variable int passée en paramètre.
+*Return: retourne le facteur du int passé en paramètre
+*/
 
 int factorial(int n)
 {
@@ -12,5 +16,5 @@ int factorial(int n)
 	{
 		return (1);
 	}
-	return (n * factorial(n-1));
+	return (n * factorial(n - 1));
 }

@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
 *print_chessboard - print the chessboard
 *@a: pointer containing the fcking array

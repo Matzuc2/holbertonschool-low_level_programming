@@ -1,10 +1,11 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
+
+
 /**
 *print_chessboard - print the chessboard
 *@a: pointer containing the fcking array
 */
+
 void print_chessboard(char (*a)[8])
 {
 	int rows;

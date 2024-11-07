@@ -6,8 +6,8 @@
 *@argc: return the number of char in appelation of program
 *@argv: return the name of argv[i]
 */
-int main(char **argv)
+int main(int argc, char **argv)
 {
 	printf("%s\n", argv[0]);
-	return (0);
+	return (argc);
 }

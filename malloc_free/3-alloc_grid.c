@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+/**
+*alloc_grid - loue l'espace pour une array en 2D
+*@width: définit la largeur de l'array 2D
+*@height: définit la hauteur de l'array 2D
+*Return: retourne le pointeur du 2d array
+*/
 
 
 int **alloc_grid(int width, int height)

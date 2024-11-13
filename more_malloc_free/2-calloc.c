@@ -22,12 +22,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	p = malloc(t);
 	if (p == 0)
 	{
-		free (p);
+		free(p);
 		return (NULL);
 	}
 	for (i = 0; i < t; i++)
-        p[i] = 0;
+	p[i] = 0;
 
 	return (p);
 }
-

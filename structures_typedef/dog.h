@@ -9,6 +9,7 @@
  * Description: This structure represents information about a dog,
  * including its name, age, and owner's name.
  */
+
 struct dog
 {
 	char *name;
@@ -18,4 +19,5 @@ struct dog
 	char *owner;
 };
 
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif

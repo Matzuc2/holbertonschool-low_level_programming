@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 /**
 *free_dog - dont abandon your dog bro
 *@d: pointeur vers d

@@ -18,6 +18,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (name == NULL || owner == NULL || age < 0)
 		return (NULL);
+	if (*name == '\0'  || *owner == '\0')
+		return (NULL);
 	for (len1 = 0; name[len1] != '\0'; len1++)
 	{
 	}
@@ -45,9 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (j = 0; j < len2; j++)
-	{
 		(*p).owner[j] = owner[j];
-	}
 	return (p);
 
 }

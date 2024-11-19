@@ -26,16 +26,16 @@ int (*o)(int, int);
 		printf("Error\n");
 		exit(100);
 	}
-	if (*argv[2] != '+' && *argv[2] != '-' &&
-	*argv[2] != '/' && *argv[2] != '*' && *argv[2] != '%')
-	{
-		printf("Error\n");
-		exit(99);
-	}
 
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 	o = get_op_func(argv[2]);
+	if ((o == NULL) || (*argv[2] != '+' && *argv[2] != '-' &&
+        *argv[2] != '/' && *argv[2] != '*' && *argv[2] != '%'))
+        {
+                printf("Error\n");
+                exit(99);
+        }
 	calc = o(x, y);
 	printf("%d\n", calc);
 	return (0);

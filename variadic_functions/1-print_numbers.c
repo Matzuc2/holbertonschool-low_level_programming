@@ -18,8 +18,8 @@ va_start(args, n);
 		printf("%d", va_arg(args, int));
 		if (separator != NULL)
 		{
-			if (i < n - 1)
-			printf("%c", *separator);
+			if (i < n)
+			printf("%c ", *separator);
 		}
 	}
 	printf("\n");

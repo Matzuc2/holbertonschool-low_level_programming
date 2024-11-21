@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 	j = 0;
 		while (which[j].w != NULL)
 		{
-			if (*(which[j].w) == format[i])
+			if (format[i] == *(which[j].w))
 			{
 				printf("%s", separator);
 				which[j].f(args);

@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * free_list - Frees a list_t list.
+ * free_dlistint - Frees a list_t list.
  * @head: Pointer to the head of the list
  *
  * Description: This function frees each node in the list, including

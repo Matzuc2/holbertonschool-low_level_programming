@@ -1,5 +1,7 @@
 #include "lists.h"
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
 /**
  * insert_dnodeint_at_index - Inserts a new node at a given position
  * in a doubly linked list.

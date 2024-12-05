@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list - Prints all elements of a list_t list
+ * print_dlistint - Prints all elements of a list_t list
  * @h: Pointer to the head of the list
  *
  * Description: This function traverses a linked list of type list_t,

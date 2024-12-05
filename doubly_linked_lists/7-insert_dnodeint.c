@@ -1,7 +1,5 @@
-#include <stdio.h>
 #include "lists.h"
-#include <string.h>
-#include <stdlib.h>
+
 /**
  * insert_dnodeint_at_index - Inserts a new node at a given position
  * in a doubly linked list.
@@ -11,6 +9,7 @@
  *
  * Return: Address of the new node, or NULL if it fails or idx is invalid.
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node, *temp = *h;

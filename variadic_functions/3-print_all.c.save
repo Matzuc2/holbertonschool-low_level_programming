@@ -1,0 +1,56 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include "variadic_functions.h"
+
+void print_int(int i)
+{
+	printf("%d", i);
+}
+void print_float(float f)
+{
+	printf("%f", f);
+}
+void print_char(char c)
+{
+    printf("%c", c);
+}
+void print_string(char* s)
+{
+        printf("%s", s);
+}
+void print_all(const char * const format, ...)
+{
+	va_list args;
+	which_s which[] = {
+	{"i", print_int},
+	{"c", print_char},
+	{"f", print_float},
+	{"s", print_string},
+	{NULL, NULL}
+	};
+
+	unsigned int i = 0;
+	unsigned int j = 0;
+	void *str;
+
+	va_start(args, format);
+
+	while (format[j] != '\0')
+	{
+	j = 0;
+		while(which[i].w != NULL)
+		{
+			str = va_arg(args, format);
+
+			if ((which[i].w) == format[j])
+			{
+				which[i].f(str);
+			}
+			i++;
+		}
+	j++;
+	}
+}
+
+
+

@@ -1,0 +1,21 @@
+#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+int x;
+int y;
+int oh;
+int calc;
+char (*which)(char);
+
+	(void)argc;
+
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
+	oh = which(get_op_func(argv[2]));
+	oh = (x, y);
+	printf("%d\n", oh);
+	return (0);
+}

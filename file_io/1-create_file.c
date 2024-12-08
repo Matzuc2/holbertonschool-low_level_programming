@@ -20,36 +20,24 @@ int create_file(const char *filename, char *text_content)
 {
 
 	int fd;
-	ssize_t read0;
 	ssize_t write0;
-	char *buffer;
+	int i = 0;
 
 	if (filename == NULL)
 		return (-1);
 
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+
 	if (fd == -1)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-
+	while (text_content[i] != '\0')
+	{
+		i++;
+	}
 	if (text_content != NULL)
 	{
-		buffer = malloc(sizeof(char) * (*text_content));
-
-		if (buffer == NULL)
-		{
-			close(fd);
-			return (-1);
-		}
-		read0 = read(fd, buffer, (*text_content));
-		close(fd);
-		if (read0 == -1)
-		{
-			free(buffer);
-			return (-1);
-		}
-		write0 = write(fd, buffer, read0);
-		free(buffer);
+		write0 = write(fd, text_content, i);
 		if (write0 == -1)
 		{
 			close(fd);

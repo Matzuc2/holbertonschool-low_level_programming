@@ -30,7 +30,10 @@ void error_exit(int code, const char *format, const char *arg)
 void close_file(int fd)
 {
 	if (close(fd) == -1)
-	error_exit(100, "Error: Can't close fd %d\n", (char *)&fd);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
 /**
  * main - Copie le contenu d'un fichier vers un autre fichier.
